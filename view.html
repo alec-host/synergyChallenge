@@ -11,6 +11,9 @@
 			html,table {
 				font-family:Calibri,Arial,Tahoma;
 			}
+			body{
+				background-color:#D8D8D8;
+			}
 			table.outer {
 				width:100%;
 				border:0px;
@@ -58,14 +61,27 @@
 				height:55px;
 				font-size:1.2em;
 				font-weight:bold;
-			}			
+			}
+			::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+				color: #BCBABB;
+				opacity: 1; /* Firefox */
+			}
+
+			:-ms-input-placeholder { /* Internet Explorer 10-11 */
+				color: #BCBABB;
+			}
+
+			::-ms-input-placeholder { /* Microsoft Edge */
+				color: #BCBABB;
+			}
 		</style>
 	</head>	
 	<body>
-		<table class="outer" border="1">
+		<table class="outer">
 			<tr>
 				<td align="center">
 					<table class="inner">
+						<tr><td height="150px">&nbsp;</td></tr>
 						<tr>
 							<td id="td_label" nowrap>Short links<br/>made easy</td>
 							<td>
