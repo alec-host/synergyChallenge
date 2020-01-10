@@ -9,7 +9,7 @@
 		
 		<style>
 			html,table {
-				font-family:Arial,Calibri,Tahoma;
+				font-family:Calibri,Arial,Tahoma;
 			}
 			table.outer {
 				width:100%;
@@ -17,37 +17,64 @@
 				background-color:#D8D8D8;
 			}
 			table.inner {
-				width:60%;
+				width:55%;
 				border:0px;
 				background-color:
 			}
 			table.search{
 				width:100%;
 				border:0px;
-				background-color:			
+				border-collapse: collapse;
+				border-radius: 5px;
+				overflow: hidden;
+				background-color:#13D0D4;			
 			}			
 			#td_label {
-				font-size: 6em;
+				font-size: 7em;
 				font-weight: bold;
 				vertical-align:top;
 				color:#139CD5;
 			}
+			#input_section{
+				width:85%;
+			}
+			input[type="text"]{
+				border-radius: 5px;	
+				border:0px;
+				border-collapse: collapse;
+				width: 100%;
+				background-color:#EAEAEA;
+				padding-left: 15px;
+				height:55px;
+				font-size:1.2em;
+			}
+			input[type="submit"]{
+				border-radius: 5px;	
+				border:0px;
+				border-collapse: collapse;				
+				width: 59%;
+				background-color:#149CD6;
+				color:#fff;
+				height:55px;
+				font-size:1.2em;
+				font-weight:bold;
+			}			
 		</style>
 	</head>	
 	<body>
 		<table class="outer" border="1">
 			<tr>
 				<td align="center">
-					<table class="inner" border="1">
+					<table class="inner">
 						<tr>
-							<td id="td_label">Short links<br/>made easy</td>
+							<td id="td_label" nowrap>Short links<br/>made easy</td>
 							<td>
 							<table width="100%">
-								<tr><td>&nbsp;</td></tr>
+								<tr><td height="40px">&nbsp;</td></tr>
 								<tr>
 									<td align="right">
-										<image src="image/ShortlinkDeskGirl.png" width="70%"/>
-									</td>	
+										<image src="image/ShortlinkDeskGirl.png" width="90%"/>
+									</td>
 								</tr>
 							</table>
 							</td>
@@ -57,15 +84,23 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<table class="search" cellpadding="0" cellspacing="0" border="1">
+								<table class="search" cellpadding="0" cellspacing="0">
+									<tr><td height="50px"></td></tr>
 									<tr>
-										<td>
-											<input type="text" id="url" name="url" />
+										<td align="center">
+											<table id="input_section">
+												<tr>
+													<td>
+														<input type="text" id="inputURL" name="inputURL" placeholder="Shorten a link here!"/>
+													</td>
+													<td align="center">
+														<input type="submit" id="btnGenerateShortURL" name="btnGenerateShortURL" value="Do it!"/>
+													</td>	
+											    </tr>
+											</table>
 										</td>
-										<td>
-											<input type="submit" value="Do it!"/>
-										</td>										
 									</tr>
+									<tr><td height="50px"></td></tr>
 								</table>
 							</td>
 						</tr>
