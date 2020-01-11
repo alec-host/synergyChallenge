@@ -51,7 +51,7 @@
 				height:55px;
 				font-size:1.2em;
 			}
-			input[type="submit"]{
+			input[type="button"]{
 				border-radius: 5px;	
 				border:0px;
 				border-collapse: collapse;				
@@ -77,52 +77,56 @@
 		</style>
 	</head>	
 	<body>
-		<table class="outer">
-			<tr>
-				<td align="center">
-					<table class="inner">
-						<tr><td height="150px">&nbsp;</td></tr>
-						<tr>
-							<td id="td_label" nowrap>Short links<br/>made easy</td>
-							<td>
-							<table width="100%">
-								<tr><td height="40px">&nbsp;</td></tr>
-								<tr>
-									<td align="right">
-										<image src="image/ShortlinkDeskGirl.png" width="90%"/>
-									</td>
-								</tr>
-							</table>
-							</td>
-						</tr>
-						<tr>
-							<td height="100px">&nbsp;</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<table class="search" cellpadding="0" cellspacing="0">
-									<tr><td height="50px"></td></tr>
+		<div id="app">
+			<table class="outer">
+				<tr>
+					<td align="center">
+						<table class="inner">
+							<tr><td height="150px">&nbsp;</td></tr>
+							<tr>
+								<td id="td_label" nowrap>Short links<br/>made easy</td>
+								<td>
+								<table width="100%">
+									<tr><td height="40px">&nbsp;</td></tr>
 									<tr>
-										<td align="center">
-											<table id="input_section">
-												<tr>
-													<td>
-														<input type="text" id="inputURL" name="inputURL" placeholder="Shorten a link here!"/>
-													</td>
-													<td align="center">
-														<input type="submit" id="btnGenerateShortURL" name="btnGenerateShortURL" value="Do it!"/>
-													</td>	
-											    </tr>
-											</table>
+										<td align="right">
+											<img src="image/ShortlinkDeskGirl.png" width="90%"/>
 										</td>
 									</tr>
-									<tr><td height="50px"></td></tr>
 								</table>
-							</td>
-						</tr>
-					</table>
-				</td>
-			<tr>
-		<table>
+								</td>
+							</tr>
+							<tr>
+								<td height="100px">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<table class="search" cellpadding="0" cellspacing="0">
+										<tr><td height="50px"></td></tr>
+										<tr>
+											<td align="center">
+												<table id="input_section">
+													<tr>
+														<td>
+															<input type="text" v-model="inputURL" id="inputURL" name="inputURL" placeholder="Shorten a link here!"/>
+														</td>
+														<td align="center">
+															<input @click="btnShortenURL" type="button" id="btnGenerateShortURL" name="btnGenerateShortURL" value="Do it!"/>
+														</td>	
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr><td height="50px"></td></tr>
+									</table>
+								</td>
+							</tr>						
+						</table>
+					</td>
+				<tr>
+			<table>
+		</div>
+		<script src="js/vue.js"></script>
+		<script type="text/javascript" src="main.js"></script>		
 	</body>
 </html>
