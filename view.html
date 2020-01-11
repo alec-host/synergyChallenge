@@ -77,6 +77,7 @@
 		</style>
 	</head>	
 	<body>
+		<!-- start of html UI -->
 		<div id="app">
 			<table class="outer">
 				<tr>
@@ -111,7 +112,7 @@
 															<input type="text" v-model="inputURL" id="inputURL" name="inputURL" placeholder="Shorten a link here!"/>
 														</td>
 														<td align="center">
-															<input @click="btnShortenURL" type="button" id="btnGenerateShortURL" name="btnGenerateShortURL" value="Do it!"/>
+															<input @click="btnShortenURL();" type="button" id="btnGenerateShortURL" name="btnGenerateShortURL" value="Do it!"/>
 														</td>	
 													</tr>
 												</table>
@@ -126,7 +127,11 @@
 				<tr>
 			<table>
 		</div>
+		<!-- end of html UI-->
+		
+		<!-- include vue library-->
 		<script src="js/vue.js"></script>
+		<!-- include the vue js app--->
 		<script type="text/javascript" src="main.js"></script>		
 	</body>
 </html>
