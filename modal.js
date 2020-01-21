@@ -10,11 +10,11 @@ new Vue({
 	
 	methods : {
 		/*METHOD to that accepts input URL to shorten */
-		btnShortenURL: function () {		
+		btnExpandURL: function () {		
 			/* assign input value to variable input */
-			var input = this.inputURL;
+			var inputView  = this.inputExpandURL;
 			/* check if input is not empty */
-			if(!input){
+			if(!inputView){
 				alert("Field must be checked");
 				return;
 			}else{
@@ -26,25 +26,15 @@ new Vue({
 							/* change json string to object */
 							var obj = JSON.parse(xhr.responseText);
 							/* print result to console */							
-							console.log(obj);
-							/* define window pop up params */
-							var w=500;
-							var h=500;
-							var left = (screen.width/2) - (w/2);
-							var tops  = (screen.height/2) - (h/2);
-							/* open window & pass the encoded short url */
-							var newWindow = window.open(this.modallURL+'?result='+obj.data.url,'Result', 'toolbar=no,scrollbars=no,directories=no,status=no,resizable=no,copyhistory=no,menubar=no;location=no,width='+w+',height='+h+',top='+tops+',left='+left);
-							if(window.focus){
-								newWindow.focus();
-							}	
-							alert(obj.data.url);
+							console.log(obj);	
+							alert(obj.data.expand[0].long_url);
 							return false;							
 						}else{
 							console.log("Request Failed");
 						}
 					}
 				};
-				xhr.open("GET", this.encodeEndPoint+"?myurl="+input);
+				xhr.open("GET", this.decodeEndPoint+"?myurl="+inputView);
 				xhr.send();
 			}
 		},

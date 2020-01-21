@@ -1,0 +1,28 @@
+==========================================================================
+REQUIREMENTS
+==========================================================================
+
+
++WAMP64
++apache 2.4.37
++php 7.2.14
++slim 3.0
++vue.js
++bitbly url shortner libarary (https://github.com/Falicon/BitlyPHP).
++bitbly free account & access token.
+
+
+Copy the folder AlexIrungu to WAMP/XAMMP and initial the web application
+
+
+All the necessary libraries & dependencies have all been installed. Also
+included is a feature to expand an encoded URL.
+
+Note: the web application has only been tested on
+Microsoft Edge 44.18362.449.0
+
+		                THANK YOU
+					 
+==========================================================================
+                           14/Jan/2020
+                           Alex Irungu						   
